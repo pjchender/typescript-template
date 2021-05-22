@@ -1,5 +1,5 @@
 interface Dictionary {
-  [index: string]: any;
+  [index: string]: unknown;
 }
 
 const unordered: Dictionary = {
@@ -29,9 +29,12 @@ const unordered: Dictionary = {
 const ordered = Object.keys(unordered)
   .sort()
   .reduce((obj: Dictionary, key) => {
-    obj[key] = unordered[key];
-    return obj;
+    return {
+      ...obj,
+      [key]: unordered[key],
+    };
   }, {});
 
 const result = JSON.stringify(ordered);
 console.log(result);
+export {};

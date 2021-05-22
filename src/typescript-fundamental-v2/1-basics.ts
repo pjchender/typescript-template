@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 type Circle = {
   color: string;
   radius: number;
@@ -33,3 +34,5 @@ export interface HasPhoneNumber {
   name: string;
   phone: string;
 }
+
+export {};

@@ -47,3 +47,5 @@ function contactPeople(
 
 contactPeople('email', { name: 'Aaron', email: 'pjchender@gmail.com' });
 // contactPeople('phone', { name: 'Aaron', email: 'pjchender@gmail.com' }); // this should not work cause of no phone number
+
+export {};
